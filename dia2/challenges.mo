@@ -73,6 +73,7 @@ actor {
             numbers.add(num);
         }; 
       };
+      repeat := 0;
     };
     return Buffer.toArray(numbers);
   };
