@@ -1,4 +1,8 @@
 service : {
   average_array: (vec nat) -> (nat);
+  convert_to_binary: (nat) -> (text);
   count_character: (text, nat32) -> (nat);
+  factorial: (nat) -> (nat);
+  find_duplicates: (vec nat) -> (vec nat);
+  number_of_words: (text) -> (nat);
 }

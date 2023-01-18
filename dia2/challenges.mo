@@ -6,7 +6,6 @@ import Iter "mo:base/Iter";
 import Blob "mo:base/Blob";
 import Nat "mo:base/Nat";
 import Debug "mo:base/Debug";
-import Nat32 "mo:base/Nat32";
 
 // import Char "mo:base/Char";
 actor {
@@ -82,7 +81,7 @@ actor {
   public func convert_to_binary(n : Nat) : async Text{
     var num : Text = Nat.toText(n);
     var blob : Blob = Text.encodeUtf8(num);
-    var out : Nat32 = Blob.hash(blob);
-    return Nat32.toText(out);
+    Debug.print(debug_show(blob));
+    return debug_show(blob);
   };
 };
