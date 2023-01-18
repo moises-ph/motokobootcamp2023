@@ -1,0 +1,4 @@
+service : {
+  average_array: (vec nat) -> (nat);
+  count_character: (text, nat32) -> (nat);
+}
