@@ -1,0 +1,8 @@
+{
+    "canisters": {
+        "book-canister" :{
+            "main" : "main.mo",
+            "type": "motoko"
+        }
+    }    
+}
