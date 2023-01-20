@@ -21,21 +21,7 @@ actor{
     };
 
     public query func http_request(req : HttpRequest): async HttpResponse{
-        
         switch(req.method){
-            case("POST"){
-                if(req.body != ""){
-                    update_text(Text.decodeUtf8(req.body));
-                    return({
-                        body = Text.encodeUtf8("Text Updated Succesfully!!");
-                        headers = [];
-                        status_code = 200;
-                        streaming_strategy = null;
-                    });
-                }else{
-                    return(BadRequest);
-                }
-            };
             case("GET"){
                 return({
                     body = Text.encodeUtf8(CurrentText);
@@ -49,6 +35,4 @@ actor{
             }
         }
     };
-
-
 }
